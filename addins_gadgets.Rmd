@@ -1,24 +1,13 @@
-# Intro to RStudio Addins & Shiny Gadgets
-
-Report here:
-
-https://beta.rstudioconnect.com/content/1918/addins_gadgets.html
-
-Example code for Intro to RStudio Addins & Shiny Gadgets.
-
-Requires the following packages from CRAN:
-
-```r
-devtools::install_github("rstudio/addinexamples", type = "source")
-devtools::install_github("thertrader/fidlr")
-install.packages("ggThemeAssist")
-``` 
-
-An up-to-date version of RStudio is also recommended.
-
-R 3.2.2 used for examples.
-
-Links/examples reviewed in the following order:
+---
+title: "Intro to RStudio Addins & Shiny Gadgets"
+output: 
+  html_document: 
+    highlight: textmate
+    toc: yes
+    toc_float: 
+      collapsed: no
+    theme: cosmo
+---
 
 ## Introduction
 

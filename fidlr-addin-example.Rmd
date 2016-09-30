@@ -1,0 +1,63 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, message=FALSE}
+library(dygraphs)
+```
+
+
+```{r}
+##let's load up some economic data the old-fashioned way
+library(quantmod)
+getSymbols(Symbols = "GDP",
+                     src = "FRED",
+                     env = globalenv())
+```
+
+
+```{r}
+
+##let's use an add-in to load up some economic data
+##first, install the package
+devtools::install_github("thertrader/fidlr")
+
+##now click on Addins at the top of the IDE, select fidlr
+##in the source drop down, click on Fred
+##in the instrument panel, type GDP
+##click Run, then click Close
+##in the Environment panel, there should be an xts object called GDP
+##now run this code chunk by clicking on the green triangle at line 20
+
+##use the US econ data
+    dygraph(GDP) %>%
+    dyRangeSelector(height = 20) %>%
+    dyShading(from = "2001-03-01", to = "2001-11-01", color = "#FFE6E6") %>%
+    dyShading(from = "2007-12-01", to = "2009-06-01", color = "#FFE6E6") %>% 
+    dyEvent(x = "2008-09-15", label = "Lehman Fails", labelLoc = "top", color = "red") %>% 
+    dyEvent(x = "1987-09-15", label = "Black Monday", labelLoc = "top", color = "black") %>% 
+    dyEvent(x = "1982-12-01", label = "Volcker Eases", labelLoc = "top", color = "green")
+    
+```
+
+
+```{r}
+##use the add in to get some currency data
+##open the addin
+##select the data source Oanda
+##type in GBP/EUR to pull in data on the British pound / Euro
+##click Run, click Close
+##now there's a data object called GBPEUR in the environment
+
+##now let's use it in a dygraph
+      dygraph(GBPEUR) %>%
+      dyRangeSelector(height = 20) %>%
+      dyAxis("y", label = "GBP/EUR", axisLabelFontSize = 10, axisLabelWidth = 70) %>% 
+      dyEvent(x = "2016-06-23", label = "Brexit", labelLoc = "top", color = "blue")
+```
+
+
+
+
+

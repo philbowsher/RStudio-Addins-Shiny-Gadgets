@@ -1,0 +1,10 @@
+name: addins_gadgets
+title: addins_gadgets
+account: philbowsher
+server: beta.rstudioconnect.com
+appId: 1918
+bundleId: 3855
+url: https://beta.rstudioconnect.com/content/1918/
+when: 1475268679.98179
+asMultiple: TRUE
+asStatic: FALSE
