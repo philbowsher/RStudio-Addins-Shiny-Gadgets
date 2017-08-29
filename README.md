@@ -4,6 +4,8 @@ Report here:
 
 https://beta.rstudioconnect.com/content/1918/addins_gadgets.html
 
+https://beta.rstudioconnect.com/content/3002/addins_gadgets.html
+
 Example code for Intro to RStudio Addins & Shiny Gadgets.
 
 Requires the following packages from CRAN:
